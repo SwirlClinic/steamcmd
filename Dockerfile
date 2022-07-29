@@ -6,7 +6,7 @@ FROM debian:bullseye-slim
 ARG UID=1000
 
 ENV USER steam
-ENV HOMEDIR "/home/${USER}"
+ENV HOMEDIR "/home"
 ENV STEAMCMDDIR "${HOMEDIR}/steamcmd"
 
 RUN set -x \
