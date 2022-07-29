@@ -23,7 +23,7 @@ RUN set -x \
 	&& sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen \
 	&& dpkg-reconfigure --frontend=noninteractive locales \
 	# Create unprivileged user
-	&& useradd -u "${PUID}" -m "${USER}" \
+	&& useradd -u "${UID}" -m "${USER}" \
 	# Download SteamCMD, execute as user
 	&& su "${USER}" -c \
 		"mkdir -p \"${STEAMCMDDIR}\" \
